@@ -12,7 +12,7 @@ This project demonstrates a basic Hardhat use case. It comes with a sample contr
 1. Clone this repository and navigate to the project directory:
 
    ```bash
-   git clone <REPOSITORY_URL>
+   git clone https://github.com/rolandolopez36/SimpleStorage-Hardhat-2-14.git
    cd SimpleStorage
    ```
 
