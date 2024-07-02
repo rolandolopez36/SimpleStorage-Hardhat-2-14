@@ -165,67 +165,6 @@ To deploy the contract to the Sepolia network, follow these steps:
    npx hardhat run scripts/deploy.js --network sepolia
    ```
 
-## Verify the Contract
-
-To verify your contract on Sepolia, follow these steps:
-
-1. Install the `hardhat-etherscan` plugin:
-
-   ```bash
-   npm install --save-dev @nomiclabs/hardhat-etherscan
-   ```
-
-2. Get your Etherscan API key from [Etherscan](https://etherscan.io/) (or [Sepolia Etherscan](https://sepolia.etherscan.io/)) and add it to your `.env` file:
-
-   ```
-   ETHERSCAN_API_KEY=your_etherscan_api_key_here
-   ```
-
-3. Update your `hardhat.config.js` to include the Etherscan plugin configuration:
-
-   ```javascript
-   require("@nomiclabs/hardhat-ethers");
-   require("@nomiclabs/hardhat-etherscan");
-   require("dotenv").config();
-
-   module.exports = {
-     solidity: {
-       compilers: [
-         {
-           version: "0.8.0",
-         },
-         {
-           version: "0.8.9",
-         },
-       ],
-     },
-     networks: {
-       hardhat: {
-         chainId: 1337,
-       },
-       sepolia: {
-         url: process.env.SEPOLIA_URL,
-         accounts: [process.env.PRIVATE_KEY],
-       },
-     },
-     etherscan: {
-       apiKey: process.env.ETHERSCAN_API_KEY,
-     },
-   };
-   ```
-
-4. Verify your contract using the following command, replacing `<CONTRACT_ADDRESS>` with the actual contract address:
-
-   ```bash
-   npx hardhat verify --network sepolia <CONTRACT_ADDRESS>
-   ```
-
-   If your contract has constructor arguments, add them after the contract address:
-
-   ```bash
-   npx hardhat verify --network sepolia <CONTRACT_ADDRESS> <ARG1> <ARG2>
-   ```
-
 ## License
 
 This project is licensed under the MIT License.
