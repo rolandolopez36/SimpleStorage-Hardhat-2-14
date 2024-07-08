@@ -119,7 +119,7 @@ To deploy the contract to the Sepolia network, follow these steps:
 2. Create a `.env` file in the root of your project and add your Sepolia RPC URL and private key:
 
    ```
-   SEPOLIA_URL=https://eth-sepolia.g.alchemy.com/v2/oKxs-03sij-U_N0iOlrSsZFr29-IqbuF
+   SEPOLIA_URL=your_sepolia_url_here
    PRIVATE_KEY=your_private_key_here
    ```
 
